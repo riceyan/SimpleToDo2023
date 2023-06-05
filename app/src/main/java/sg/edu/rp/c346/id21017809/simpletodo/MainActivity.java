@@ -4,10 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Spinner;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     EditText etInput;
     Button btnAdd, btnClear;
     ListView lvTasks;
+    Spinner spnAddRemove;
     ArrayList<String> alTasks = new ArrayList<String>();
 
 
@@ -29,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         btnAdd = findViewById(R.id.buttonAdd);
         btnClear = findViewById(R.id.buttonClear);
         lvTasks = findViewById(R.id.listViewTasks);
+        spnAddRemove = findViewById(R.id.spinner);
 
         alTasks.add("Watch movie with Jenny");
 
@@ -54,7 +58,25 @@ public class MainActivity extends AppCompatActivity {
                 aaTasks.notifyDataSetChanged();
             }
         });
+        spnAddRemove.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                switch (position) {
+                    case 0:
+                        //a
+                        break;
+                    case 1:
+                        //a
+                        break;
+                }
+            }
 
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+
+        });
 
     }
 }

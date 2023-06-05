@@ -3,4 +3,8 @@
     <string name="addButton">ADD</string>
     <string name="clearButton">CLEAR</string>
     <string name="deleteButton">DELETE</string>
+    <string-array name="spinnerItems">
+        <item>Add a new task</item>
+        <item>Remove a task</item>
+    </string-array>
 </resources>
